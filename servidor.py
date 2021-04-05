@@ -37,11 +37,12 @@ def recibir_texto():
             data_str  = data.decode('windows-1252')
             
         size_recv += len(data)            
-HOST = 'localhost'
+HOST = '10.128.0.3'
 PORT =  80
 
 conexion = socket(AF_INET,SOCK_STREAM)
 conexion.bind((HOST,PORT))
+print("ESTOY A LA ESCUCHA")
 conexion.listen(1)
 usuario,info_usuario = conexion.accept()
 
